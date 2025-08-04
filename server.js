@@ -52,14 +52,14 @@ if (!dbUri) {
 }
 mongoose
   .connect(dbUri)
-  .then(() => console.log('✅ Connected to MongoDB'))
+  .then(() => console.log(' Connected to MongoDB'))
   .catch((err) => {
-    console.error('❌ MongoDB connection error:', err);
+    console.error(' MongoDB connection error:', err);
     process.exit(1);
   });
 
 // Start server
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`🚀 Backend listening on port ${PORT}`);
+  console.log(` Backend listening on port ${PORT}`);
 });
